@@ -9,7 +9,67 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        form {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 80%;
+            margin: 0 auto;
+        }
 
+        label {
+            flex-basis: 100%;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea {
+            flex-basis: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #dda77bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: rgb(243, 207, 178);
+            color: rgb(34, 32, 32);
+        }
+
+        @media screen and (min-width: 768px) {
+            label {
+                flex-basis: 30%;
+                text-align: right;
+                padding-right: 20px;
+            }
+
+            input[type="text"],
+            input[type="email"],
+            input[type="tel"],
+            textarea {
+                flex-basis: 65%;
+            }
+
+            input[type="submit"] {
+                flex-basis: 100%;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -36,6 +96,56 @@
 
             </div>
         </header>
+        <section>
+
+            <div class="wrapper">
+                <form action="submit_form.php" method="post">
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName" name="firstName" required>
+
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" name="lastName" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+
+                    <label for="city">City:</label>
+                    <input type="text" id="city" name="city">
+
+                    <label for="province">Province:</label>
+                    <input type="text" id="province" name="province">
+
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone">
+
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </section>
+        <footer>
+            <div class="wrapper">
+                <h2>Let's do it!</h2>
+
+                <!-- Social media and contact links. -->
+                <p>Join our daily challenge of meditation atleast 20 minutes each day </p>
+                <p>Fill the form and join the challenge </p>
+                <a href="joinnow.html">JOIN NOW</a>
+
+                <ul>
+                    <li><a href="mailto:email@example.com">email@example.com</a></li>
+                    <li><a href="http://yourwebsite.com" target="_blank">yourwebsite.com</a></li>
+                    <li><a href="#" target="_blank">Twitter</a></li>
+                    <li><a href="#" target="_blank">LinkedIn</a></li>
+                    <li><a href="#" target="_blank">Facebook</a></li>
+                </ul>
+            </div>
+        </footer>
+    </main>
+
+
     </main>
 </body>
 
