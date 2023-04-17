@@ -17,8 +17,6 @@
             padding: 20px 15%;
         }
 
-
-
         form header {
             margin: 0 0 20px 0;
         }
@@ -35,9 +33,18 @@
         form>div {
             clear: both;
             overflow: hidden;
-            padding: 5px;
-            margin: 0 0 0px 0;
+            padding: 10px;
+            margin: 0;
         }
+
+        #user {
+            font-size: 44px;
+            text-align: center;
+            margin-top: 0;
+            padding-top: 20px;
+        }
+
+
 
         form>div>fieldset>div>div {
             margin: 0 0 5px 0;
@@ -141,42 +148,43 @@
     <main>
         <header>
             <div class="wrapper">
-                <div class="logo">
-                    <img src="images/Zen.png" alt="description of image">
+                <a href="index.html">
+                    <div class="logo">
+                        <img src="images/Zen.png" alt="description of image">
 
-                    <nav>
+                        <nav>
 
-                        <ul class="navigation">
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="typesofmediation.html">Know Meditation Types</a></li>
-                            <li><a href="beginners.html">Meditation For Beginners</a></li>
-                            <li> <a href="joinnow.html">Join Now</a></li>
-                            <li> <a href="register.html">Register</a></li>
-                            <li class="right"><a href="contact.html">Contact </a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <h1>Discover Yourself </h1>
+                            <ul class="navigation">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="typesofmediation.html">Know Meditation Types</a></li>
+                                <li><a href="beginners.html">Meditation For Beginners</a></li>
+                                <li> <a href="joinnow.html">Join Now</a></li>
+                                <li> <a href="register.html">Register</a></li>
+                                <li class="right"><a href="contact.html">Contact </a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <h1>Discover Yourself </h1>
 
 
-                <h2>Through Meditation</h2>
-                <!-- ********************  WHAT IS MEDITATION ?  ********************* -->
-                <p>Meditation is a practice of training the mind to achieve a state of calm awareness, mindfulness, and
-                    inner
-                    peace.</p>
-                <p>"The mind is everything. What you think, you become."~ Buddha </p>
+                    <h2>Through Meditation</h2>
+                    <!-- ********************  WHAT IS MEDITATION ?  ********************* -->
+                    <p>Meditation is a practice of training the mind to achieve a state of calm awareness, mindfulness,
+                        and
+                        inner
+                        peace.</p>
+                    <p>"The mind is everything. What you think, you become."~ Buddha </p>
             </div>
         </header>
         <section class="meditation-types">
 
-            <h1 class="user">User Information Form</h1>
+            <h1 id="user">User Information Form</h1>
             <form action="#">
-
                 <div>
-                    <label class="desc" id="title1" for="Field1">Full Name</label>
+                    <label class="desc" id="title1" for="Field1">Full Name:</label>
                     <div>
                         <input id="Field1" name="Field1" type="text" class="field text fn" value="" size="8"
-                            tabindex="1">
+                            tabindex="1" required>
                     </div>
                 </div>
 
@@ -186,13 +194,13 @@
                     </label>
                     <div>
                         <input id="Field3" name="Field3" type="email" spellcheck="false" value="" maxlength="255"
-                            tabindex="3">
+                            tabindex="3" required>
                     </div>
                 </div>
 
                 <div>
                     <label class="desc" id="title4" for="Field4">
-                        Message
+                        Any specific meditation techniques or practices you follow (if applicable):
                     </label>
 
                     <div>
@@ -205,7 +213,7 @@
                     <fieldset>
 
                         <legend id="title5" class="desc">
-                            Select a Choice
+                            How did you hear about us?
                         </legend>
 
                         <div>
@@ -213,15 +221,15 @@
                             <div>
                                 <input id="Field5_0" name="Field5" type="radio" value="First Choice" tabindex="5"
                                     checked="checked">
-                                <label class="choice" for="Field5_0">First Choice</label>
+                                <label class="choice" for="Field5_0">Facebook</label>
                             </div>
                             <div>
                                 <input id="Field5_1" name="Field5" type="radio" value="Second Choice" tabindex="6">
-                                <label class="choice" for="Field5_1">Second Choice</label>
+                                <label class="choice" for="Field5_1">Instagram</label>
                             </div>
                             <div>
                                 <input id="Field5_2" name="Field5" type="radio" value="Third Choice" tabindex="7">
-                                <label class="choice" for="Field5_2">Third Choice</label>
+                                <label class="choice" for="Field5_2">Twiiter</label>
                             </div>
                         </div>
                     </fieldset>
@@ -230,38 +238,38 @@
                 <div>
                     <fieldset>
                         <legend id="title6" class="desc">
-                            Check All That Apply
+                            Time of day for meditation:(click all that apply)
                         </legend>
                         <div>
                             <input id="Field6" name="Field6" type="checkbox" value="First Choice" tabindex="8">
-                            <label class="choice" for="Field6">First Choice</label>
+                            <label class="choice" for="Field6">Morning</label>
                         </div>
                         <div>
                             <input id="Field7" name="Field7" type="checkbox" value="Second Choice" tabindex="9">
-                            <label class="choice" for="Field7">Second Choice</label>
+                            <label class="choice" for="Field7">Evening </label>
                         </div>
                         <div>
                             <input id="Field8" name="Field8" type="checkbox" value="Third Choice" tabindex="10">
-                            <label class="choice" for="Field8">Third Choice</label>
+                            <label class="choice" for="Field8">night</label>
                         </div>
                     </fieldset>
                 </div>
 
                 <div>
                     <label class="desc" id="title106" for="Field106">
-                        Select a Choice
+                        Mode Of Attending
                     </label>
                     <div>
                         <select id="Field106" name="Field106" class="field select medium" tabindex="11">
-                            <option value="First Choice">First Choice</option>
-                            <option value="Second Choice">Second Choice</option>
-                            <option value="Third Choice">Third Choice</option>
+                            <option value="First Choice">in-person</option>
+                            <option value="Second Choice">online</option>
+                            <!-- <option value="Third Choice">Third Choice</option> -->
                         </select>
                     </div>
                 </div>
 
                 <div>
-                    <div style="padding: 0;">
+                    <div>
                         <input id="saveForm" name="saveForm" type="submit" value="Submit">
                     </div>
                 </div>

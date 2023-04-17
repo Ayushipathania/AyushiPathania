@@ -10,121 +10,140 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <style>
-        form {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            width: 80%;
+        body,
+        html {
+            height: 100%;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .bg-img {
+            /* The image used */
+            background-image: url("images/Ww.png");
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            /* Use 'cover' to make the image cover the entire container */
+            position: relative;
+            height: 100%;
+            height: 1000px;
+            /* Set the height to 100% to cover the entire viewport */
+        }
+
+        .container {
+            /* Form container */
+            position: absolute;
+            top: 29%;
+            /* Position the container at the vertical center */
+            left: 50%;
+            /* Position the container at the horizontal center */
+            transform: translate(-50%, -50%);
+            /* Center the container using transform */
             margin: 0 auto;
+            /* Center the container using margin */
+            max-width: 450px;
+            padding: 16px;
+            background-color: white;
         }
 
-        label {
-            flex-basis: 100%;
-            font-weight: bold;
-        }
-
-        input[type="text"],
-        input[type="email"],
-        input[type="tel"],
-        textarea {
-            flex-basis: 100%;
-            padding: 10px;
-            margin-bottom: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-
-        input[type="submit"] {
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #dda77bff;
-            color: #fff;
+        /* Full-width input fields */
+        input[type=text],
+        input[type=password],
+        input[type=email],
+        input[type=tel] {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
             border: none;
-            border-radius: 5px;
-            font-size: 16px;
+            background: #f1f1f1;
+        }
+
+        input[type=text]:focus,
+        input[type=password]:focus,
+        input[type=email]:focus,
+        input[type=tel]:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+
+
+        .btn {
+            /* Set a style for the submit button */
+            background-color: #F4A259;
+            color: white;
+            padding: 16px 20px;
+            border: none;
             cursor: pointer;
+            width: 100%;
+            opacity: 0.9;
         }
 
-        input[type="submit"]:hover {
-            background-color: rgb(243, 207, 178);
-            color: rgb(34, 32, 32);
-        }
-
-        @media screen and (min-width: 768px) {
-            label {
-                flex-basis: 30%;
-                text-align: right;
-                padding-right: 20px;
-            }
-
-            input[type="text"],
-            input[type="email"],
-            input[type="tel"],
-            textarea {
-                flex-basis: 65%;
-            }
-
-            input[type="submit"] {
-                flex-basis: 100%;
-            }
+        .btn:hover {
+            opacity: 1;
         }
     </style>
 </head>
 
+
+
 <body>
     <main>
-        <!-- ***********************  HOMEPAGE  *********************** -->
+        <!-- HOMEPAGE -->
         <header>
             <div class="wrapper">
                 <div class="logo">
-                    <img src="images/Zen.png" alt="description of image">
+                    <a href="index.html">
+                        <img src="images/Zen.png" alt="description of image">
+                        <nav>
+                            <ul class="navigation">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="typesofmediation.html">Know Meditation Types</a></li>
+                                <li><a href="beginners.html">Meditation For Beginners</a></li>
+                                <li><a href="joinnow.html">Join Now</a></li>
+                                <li><a href="register.html">Register</a></li>
+                                <li class="right"><a href="contact.html">Contact </a></li>
+                            </ul>
+                        </nav>
+                        <h1> Discover Yourself </h1>
 
-                    <nav>
 
-                        <ul class="navigation">
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="typesofmediation.html">Know Meditation Types</a></li>
-                            <li><a href="beginners.html">Meditation For Beginners</a></li>
-                            <li> <a href="joinnow.html">Join Now</a></li>
-                            <li> <a href="register.html">Register</a></li>
-                            <li class="right"><a href="contact.html">Contact </a></li>
-                        </ul>
-                    </nav>
+                        <h2>Through Meditation</h2>
+                        <!-- ********************  WHAT IS MEDITATION ?  ********************* -->
+                        <p>Meditation is a practice of training the mind to achieve a state of calm awareness,
+                            mindfulness,
+                            and inner
+                            peace.</p>
+                        <p>"The mind is everything. What you think, you become."~ Buddha </p>
                 </div>
-
-
-            </div>
         </header>
-        <section>
+        </div>
+        </div>
+        </header>
 
-            <div class="wrapper">
-                <form action="submit_form.php" method="post">
-                    <label for="firstName">First Name:</label>
-                    <input type="text" id="firstName" name="firstName" required>
+        <div class="bg-img">
 
-                    <label for="lastName">Last Name:</label>
-                    <input type="text" id="lastName" name="lastName" required>
+            <!-- Background image -->
 
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
+            <div class="container">
+                <!-- Form container -->
+                <form>
+                    <input type="text" placeholder="First Name">
+                    <input type="text" placeholder="Last Name">
+                    <input type="email" placeholder="Email">
 
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
+                    <input type="text" placeholder="City">
+                    <input type="text" placeholder="Province">
+                    <input type="tel" placeholder="Phone">
+                    <textarea placeholder="Message"></textarea>
+                    <button type="submit" class="btn">Send</button>
 
-                    <label for="city">City:</label>
-                    <input type="text" id="city" name="city">
-
-                    <label for="province">Province:</label>
-                    <input type="text" id="province" name="province">
-
-                    <label for="phone">Phone:</label>
-                    <input type="tel" id="phone" name="phone">
-
-                    <input type="submit" value="Submit">
                 </form>
             </div>
-        </section>
+        </div>
         <footer>
             <div class="wrapper">
                 <h2>Let's do it!</h2>
@@ -143,9 +162,6 @@
                 </ul>
             </div>
         </footer>
-    </main>
-
-
     </main>
 </body>
 
